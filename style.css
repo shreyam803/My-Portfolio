@@ -1,23 +1,18 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* .sequence
-{
-    display:inline-block;
-} */
-/* .nav-right{
-    display:inline-block;
-} */
 .nav-right{
-    float:right;
-    position:absolute;
-    top:3%;
-    right:2%;
+   
+    float: right;
+    position: absolute;
+    top: 5%;
+    right: 2%; 
 }
+
 .nav-right a{
-    /* display:inline-block; */
+    
     text-decoration: none;
     color: #fff;
     margin: 1vh;
@@ -36,22 +31,16 @@
       transition-duration: 0.8s;
 }
 
-/* .background{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('backS.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position:fixed;
-    width: 100%;
-    height: 100vh;
-    background-position: 100% 50%; 
-} */
+
 
 
   
-  .background {
+.background {
     padding: 180px 0 100px 0;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('backS.jpg');
     height: 100vh;
+    width:100%;
+    /* width: 30vh */
     background-size: cover;
     background-position: center top;
     color: white;
@@ -69,6 +58,7 @@
   
   .background p {
     opacity: 0.7;
+    
     font-size: 2rem;
   }
   
@@ -78,7 +68,7 @@
     padding: 3rem;
     background: #eeeeee;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     }
 
 .card{
@@ -86,36 +76,38 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
-    flex-basis: 60%;
-    margin-left: 20px;
     flex-direction: row;
     background: #fff;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.4);
+    flex-basis: 70%;
+    
 }
 
 
 .card .image-data{
-    height: 270px;
-    width: 260px;
+    height: 60%;
+    width: 50vw;
 }
 
 .image-data{
     position: relative;
     overflow: hidden;
-    flex-basis: 50%;
+    flex-basis: 30%;
     
     
 }
+
 .image-data img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
     position: absolute;
     left: 0;
     top: 0;
-    margin-left: -30px;
-    transform: skew(5deg);
-}
+    margin-left: 4vw;
+    /* border-radius: 20%; */
+    }
+
 
 
 /* --------------------content styling---------------------- */
@@ -167,6 +159,102 @@ h3 {
     height: 40vh;
     width: 33%;  
 }
+
+@media only screen and (max-width:750px){
+    
+
+    
+    div.cont{
+        
+        background: #eeeeee;
+        display: flex;
+        flex-direction: column; 
+        }
+    
+    div.lesson-wrapper {
+        padding-bottom: 10px;
+        padding-left: 1%;
+        padding-right: 1%;
+        height: 270px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-right a{
+        
+        text-decoration: none;
+        color: #fff;
+        margin: 1vh;
+        padding: 1vh 1vh;
+        font-family: 'Roboto', sans-serif;  
+        float: right;
+        background-color: black;
+        border-radius: 4px;
+        font-size: 1rem;
+        letter-spacing: .5px;
+        opacity: 0.5;
+    }
+
+    div.content{
+        padding: 1rem 1rem;
+        /* margin-left: -40px; */
+        justify-content: space-between;
+    }
+    div.image-data{
+        display: none;
+    }
+    div.lesson {
+        display: block;
+        height: 40vh;
+        width: 100%;  
+        
+    }
+
+    div.content{
+        background-image:  linear-gradient(rgba(78, 68, 68, 0.393),rgba(78, 68, 68, 0.393)), url("shreyaS.jpg");
+        background-size: cover;
+        background-position: center top;
+        
+    }
+    
+    div.post h3{
+        color: white;
+    }
+    div.post p{
+        color: rgb(253, 253, 253);
+    }
+
+    div.lesson-icon p {
+
+        font-size: 20px;
+        color: black;
+    }
+    
+    p.text-contents {
+        width: 80vw;
+        display: inline-block;
+        /* padding: 40px; */
+        margin-top: 4vh;
+        font-size: 15px;
+        color: #b3aeb5;
+    }
+    div.lesson-icon img{
+        width: 60vw;
+        height: 28vh;
+        padding: 1vh  1vw;
+  }
+  .image-data img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: -30%;
+    top: 0;
+    }
+
+    
+
+}
   
 .lesson-icon {
     position: relative;
@@ -181,8 +269,9 @@ h3 {
 }
 
 .lesson-icon img{
-      width: 200px;
+      width: 30vw;
       height: 165px;
+      padding: 4px 20px;
 }
   
 .text-contents {
@@ -190,20 +279,27 @@ h3 {
     display: inline-block;
     margin-top: 40px;
     font-size: 1.2vw;
-    color:grey;
+    color: #b3aeb5;
 }
 
-
+.image-data img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: -30%;
+    top: 0;}
   /* --------------skill----------------- */
 
   .center{
       display: flex;
       justify-content: center;
       margin: 40px;
-      
+      /* align-items: center; */
   }
   .skills{
       width: 70%;
+      
       padding: 20px;
       background: rgb(189, 176, 176);
       box-shadow: 0 20px 50px rgba(0,0,0,0.5);
@@ -222,21 +318,57 @@ h3 {
 
   
 
-  .skill{
-      background: #fff;
-      padding: 1px;
-      border: 1px solid #0fffb7;
-      margin-bottom: 10px;
-      border-radius: 4px;
-  }
+.skill{
+    background: #fff;
+    padding: 1px;
+    border: 1px solid #0fffb7;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
 
   .skill-level{
       background: #0fffb7;
       width: 100%;
-      height: 8px; 
-  } 
+      height: 8px;
+  }
 
-  footer{
+/* ------------interest----------- */
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.interest{
+    margin: 2vh 3vw;
+    width: 60vw;
+    font-family: sans-serif;
+    text-align: center;
+}
+.interest p{
+    padding: 4vh 5vw;
+    border-radius: 8px;
+    margin: 3vh 0;
+    background-color: rgb(182, 251, 150);
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+
+.interest h2{
+    display: inline;
+    border-bottom: 1.5px dotted black;
+    
+}
+
+.interest h1{
+    margin: 4vh 0;
+    letter-spacing: 1vw;
+}
+
+
+
+
+footer{
     height: 25%;
     width: 100%;   
     margin-top: 5px;
@@ -283,7 +415,7 @@ h3 {
     position: absolute;
     top: 0;
     left: 0;
-     animation: /*zoominout */updown 8s infinite;
+    animation: /*zoominout*/ updown 8s infinite; 
     z-index: -1; 
 }
 
@@ -297,14 +429,14 @@ h3 {
 }
 
 .bars a img{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     padding: 4px;
     margin-left: 8px;
     margin-top: 2rem;
     border-bottom: 2px dotted white;
     z-index: 1; 
-    -webkit-transition: -webkit-transform 0.3s;
+    -webkit-transition: -webkit-transform .3s;
 
 }
 
